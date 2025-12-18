@@ -1,8 +1,14 @@
+"use client";
 import Image from "next/image";
+import { GetUserName } from "../../action/GetUserInfo";
 
-export const Info = () => {
+interface infoData {
+  data: string;
+}
+
+export const Info = ({ data }: infoData) => {
   return (
-    <div className=" flex    items-center gap-30 ">
+    <div className=" flex  flex-col  items-center w-full justify-around sm:flex-row ">
       <Image
         src="/images/pp.jpg"
         alt="Logo"
@@ -11,9 +17,9 @@ export const Info = () => {
         className="rounded-lg h-50 w-45 "
       />
       <span className="flex flex-col gap-1 ">
-        <a className="font-bold text-2xl  ">Shrawan Sharma</a>
+        <a className="font-bold text-2xl  ">{data}</a>
         {/* job */}
-        <a className="font-light  text-para flex gap-2">
+        <a className="items-center font-light  text-para flex gap-2">
           <svg
             width="15"
             height="15"
@@ -33,7 +39,7 @@ export const Info = () => {
         </a>
 
         {/* adress */}
-        <a className="font-light text-para flex gap-2">
+        <a className="font-light items-center text-para flex gap-2">
           <svg
             width="15"
             height="15"
@@ -53,7 +59,7 @@ export const Info = () => {
         </a>
 
         {/* email */}
-        <a className="font-light text-para flex gap-2">
+        <a className="font-light items-center text-para flex gap-2">
           <svg
             width="15"
             height="15"
@@ -73,7 +79,7 @@ export const Info = () => {
         </a>
 
         {/* linkedIn */}
-        <a className="font-light  text-para flex gap-2">
+        <a className="font-light items-center  text-para flex gap-2">
           <svg
             width="15"
             height="15"
@@ -93,7 +99,7 @@ export const Info = () => {
         </a>
 
         {/* github */}
-        <a className="font-light  text-para flex gap-2">
+        <a className="font-light items-center  text-para flex gap-2">
           <svg
             width="15"
             height="15"
