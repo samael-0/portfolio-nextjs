@@ -10,10 +10,12 @@ import About from "./components/About";
 import Accordian from "./components/Accordian";
 import Projects from "./components/Projects";
 import { GetUserName } from "../action/GetUserInfo";
+import { GetExperience } from "@/action/GetExperience";
 
 export default async function Home() {
   const data = await GetUserName();
-  console.log(data);
+  const data2 = await GetExperience();
+  console.log("hello", data2);
 
   return (
     <div className="flex flex-col items-center gap-4    w-full font-inter scale-100 h-full">
