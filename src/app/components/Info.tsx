@@ -3,7 +3,14 @@ import Image from "next/image";
 import { GetUserName } from "../../action/GetUserInfo";
 
 interface infoData {
-  data: string;
+  data: {
+    name: String;
+    profession: String;
+    address: String;
+    email: String;
+    linkedin: String;
+    github: String;
+  };
 }
 
 export const Info = ({ data }: infoData) => {
@@ -17,7 +24,7 @@ export const Info = ({ data }: infoData) => {
         className="rounded-lg h-50 w-45 "
       />
       <span className="flex flex-col gap-1 ">
-        <a className="font-bold text-2xl  ">{data}</a>
+        <a className="font-bold text-2xl  ">{data.name}</a>
         {/* job */}
         <a className="items-center font-light  text-para flex gap-2">
           <svg
@@ -35,7 +42,7 @@ export const Info = ({ data }: infoData) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-          Software Developer
+          {data.profession}
         </a>
 
         {/* adress */}
@@ -55,7 +62,7 @@ export const Info = ({ data }: infoData) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-          Kathmandu,Nepal
+          {data.address}
         </a>
 
         {/* email */}
@@ -75,7 +82,7 @@ export const Info = ({ data }: infoData) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-          mundushrm@gmail.com
+          {data.email}
         </a>
 
         {/* linkedIn */}
@@ -95,7 +102,7 @@ export const Info = ({ data }: infoData) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-          linkedin.com/shrawan
+          {data.linkedin}
         </a>
 
         {/* github */}
@@ -115,7 +122,7 @@ export const Info = ({ data }: infoData) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-          github.com/samael-0
+          {data.github}
         </a>
       </span>
     </div>

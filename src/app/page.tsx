@@ -13,12 +13,15 @@ import { GetUserName } from "../action/GetUserInfo";
 
 export default async function Home() {
   const data = await GetUserName();
+  console.log(data);
+
   return (
     <div className="flex flex-col items-center gap-4    w-full font-inter scale-100 h-full">
       <div className="flex justify-between w-full px-10 py-4 font-extrabold">
         <p>portfolio</p>
         {/* Header */}
         <Header />
+
         <ul className="flex">
           <li>
             <button>en</button>
