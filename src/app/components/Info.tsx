@@ -4,12 +4,12 @@ import { GetUserName } from "../../action/GetUserInfo";
 
 interface infoData {
   data: {
-    name: String;
-    profession: String;
-    address: String;
-    email: String;
-    linkedin: String;
-    github: String;
+    name: string;
+    profession: string;
+    address: string;
+    email: string;
+    linkedin: string;
+    github: string;
   };
 }
 

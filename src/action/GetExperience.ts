@@ -2,13 +2,13 @@
 
 interface descType {
   _id: ObjectId;
-  description: String;
+  description: string;
 }
 
 interface expType {
   _id: ObjectId;
-  experience: String;
-  position: String;
+  experience: string;
+  position: string;
   description: descType[];
 }
 

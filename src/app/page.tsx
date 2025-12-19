@@ -14,8 +14,7 @@ import { GetExperience } from "@/action/GetExperience";
 
 export default async function Home() {
   const data = await GetUserName();
-  const data2 = await GetExperience();
-  console.log("hello", data2);
+  const expData = await GetExperience();
 
   return (
     <div className="flex flex-col items-center gap-4    w-full font-inter scale-100 h-full">
@@ -48,7 +47,7 @@ export default async function Home() {
         </div>
 
         {/* details */}
-        <Accordian />
+        <Accordian data={expData} />
 
         {/* projects */}
         <Projects />

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { ReactNode } from "react";
 import { FaReact, FaJs, FaCode } from "react-icons/fa";
 import { IconType } from "react-icons";
