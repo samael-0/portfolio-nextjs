@@ -8,8 +8,12 @@ function Projects() {
         <div className="flex gap-2">
           <img src="images/c-sharp.png" className="h-10" alt="" />
           <div>
-            <p>Finance Tracker</p>
-            <p>A React .Net Finance Tracking System</p>
+            <p className="font-medium items-center text-[14px]">
+              Finance Tracker
+            </p>
+            <p className="font-light items-center text-[12px]  text-para">
+              A React .Net Finance Tracking System
+            </p>
           </div>
         </div>
         <p>datetime</p>

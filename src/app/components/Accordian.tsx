@@ -26,10 +26,10 @@ function Accordian({ data }: expData) {
             <div className="flex gap-2">
               <img className="h-10" src="images/c-sharp.png" alt="" />
               <div>
-                <p className="font-medium items-center text-2xs   ">
+                <p className="font-medium items-center text-[16px]   ">
                   {items.experience}
                 </p>
-                <p className="font-light items-center text-sm  text-para">
+                <p className="font-light items-center text-[12px]  text-para">
                   {items.position}
                 </p>
               </div>
@@ -43,11 +43,8 @@ function Accordian({ data }: expData) {
             </div>
           </div>
           <div
-            items-center
-            text-2xs
-            className={`overflow-hidden transition-all duration-300   ${
-              open ? "max-h-full" : "max-h-0"
-            }`}
+            className={`overflow-hidden transition-all duration-300  items-center ml-12
+            text-[12px]  ${open ? "max-h-125" : "max-h-0"}`}
           >
             {items.description.map((descs, index) => (
               <p key={index} className="text-justify font-light text-[0.9rem]">

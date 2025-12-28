@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="flex flex-col items-center rounded-xl  ">
       <p className=" font-bold text-xl mb-2">About</p>
-      <p className=" text-justify font-light text-[0.9rem] ">
+      <p className=" text-justify font-light text-[14px] ">
         I am a{" "}
         <a className="bg-red-400/30 hover:cursor-pointer px-1.5 py-0.5 font-medium rounded-lg text-red-400">
           Full-Stack Developer
